@@ -1,0 +1,258 @@
+<!-- #6 
+PROBLEMAS
+1) Se ingresan tres notas de un alumno, si el promedio es mayor o igual a siete mostrar el mensaje 
+'Promocionado'. Tener en cuenta que para obtener el promedio debemos operar suma=nota1+nota2+nota3; 
+y luego hacer promedio=suma/3; Cuando cargamos una nota y queremos convertir inmediatamente el valor 
+ingresado a entero podemos hacer: nota1=prompt('Ingrese primer nota:','');
+nota1=parseInt(nota1);
+
+2) Solicitar que se ingrese dos veces una clave. Mostrar un mensaje si son iguales (tener en cuenta 
+que para ver si dos variables tienen el mismo valor almacenado debemos utilizar el operador ==)
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+Problema #1
+<script>
+  var nota1;
+  var nota2;
+  var nota3;
+  nota1=prompt('Ingrese su primera nota:','');
+  nota1=parseInt(nota1)
+  nota2=prompt('Ingrese su segunda nota:','');
+  nota1=parseInt(nota2)
+  nota3=prompt('Ingrese su tercera nota:','');
+  nota1=parseInt(nota3)
+  suma= parseInt(nota1) + parseInt(nota2) + parseInt(nota3);
+  promedio= suma / 3;
+  if (promedio >= 7)
+  {
+    document.write(' Promocionado')
+  }
+  
+</script> 
+
+Problema #2
+<script>
+  var clave1;
+  var clave2;
+  clave1= prompt('Ingrese una clave:','');
+  clave2= prompt('Confirme su clave:','');
+  if (clave2 == clave1 )
+  {
+    document.write(' Clave correcta')
+  }
+  
+</script>
+
+</body>
+</html> -->
+
+<!-- #7 
+    1- Realizar un programa que lea por teclado dos números, si el primero es mayor al segundo informar 
+    su suma y diferencia, en caso contrario informar el producto y la división del primero respecto al segundo.
+2- Se ingresan tres notas de un alumno, si el promedio es mayor o igual a 4 mostrar un mensaje 'regular', 
+   sino 'reprobado'.
+3- Se ingresa por teclado un número positivo de uno o dos dígitos (1..99) mostrar un mensaje indicando si 
+   el número tiene uno o dos dígitos (recordar de convertir a entero con parseInt para preguntar posteriormente 
+   por una variable entera). Tener en cuenta qué condición debe cumplirse para tener dos dígitos un número entero.
+   <html>
+   <head>
+     <title>Ejemplo de JavaScript</title>
+     <meta charset="UTF-8">
+   </head>
+   <body>
+   
+Problema #1
+    <script>
+     var num1,num2;
+     num1=prompt('Ingrese el primer número:','');
+     num2=prompt('Ingrese el segundo número:','');
+     num1=parseInt(num1);
+     num2=parseInt(num2);
+     if (num1>num2)
+     {
+        var suma = parseInt(num1) + parseInt(num2);
+        var resta = parseInt(num1) - parseInt(num2);
+       document.write('Su suma es '+ suma);
+       document.write('<br>');
+       document.write('Su resta es '+ resta);
+     }
+     else
+     {
+        var mult = parseInt(num1) * parseInt(num2);
+        var div = parseInt(num1) / parseInt(num2);
+       document.write('Su producto es '+ mult);
+       document.write('<br>');
+       document.write('Su division es '+ div);
+     }
+   </script> 
+
+Problema #2
+<script>
+    var nota1,nota2,nota3;
+    nota1=prompt('Ingrese su primera nota:','');
+    nota2=prompt('Ingrese su segunda nota:','');
+    nota3=prompt('Ingrese su tercera nota:','');
+    suma= parseInt(nota1) + parseInt(nota2) + parseInt(nota3);
+    promedio= suma / 3;
+    if (promedio >= 4)
+    {
+      document.write('regular');
+    }
+    else
+    {
+      document.write('reprobado');
+    }
+  </script> 
+
+Problema #3
+<script>
+    var num;
+    num=parseInt(prompt('Ingrese un numero:',''));
+    if (num >= 9)
+    {
+      document.write('numero de 2 digitos');
+    }
+    else
+    {
+        document.write('numero de 1 digitos');
+    }
+  </script>
+   
+   </body>
+   </html> -->
+
+<!-- #8
+1)- Se cargan por teclado tres números distintos. Mostrar por pantalla el mayor de ellos.\
+2)- Se ingresa por teclado un valor entero, mostrar una leyenda que indique si el número es positivo, cero o negativo.
+3)- Confeccionar un programa que permita cargar un número entero positivo de hasta tres cifras y muestre un mensaje 
+indicando si tiene 1, 2, o 3 cifras.
+4)- De un postulante a un empleo, que realizó un test de capacitación, se obtuvo la siguiente información: nombre del 
+postulante, cantidad total de preguntas que se le realizaron y cantidad de preguntas que contestó correctamente. Se 
+pide confeccionar un programa que lea los datos del postulante e informe el nivel del mismo según el porcentaje de 
+respuestas correctas que ha obtenido, y sabiendo que:
+
+Nivel superior: Porcentaje>=90%.
+Nivel medio: Porcentaje>=75% y <90%.
+Nivel regular: Porcentaje>=50% y <75%.
+Fuera de nivel: Porcentaje<50%.-->
+  <html>
+    <head>
+      <title>Ejemplo de JavaScript</title>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+    
+<!-- Problema #1
+    <script>
+      var num1,num2,num3;
+      num1=prompt('Ingrese 1er. numero:','');
+      num2=prompt('Ingrese 2do. numero:','');
+      num3=prompt('Ingrese 3ro. numero:','');
+      //Convertimos los 3 string en enteros
+      num1=parseInt(num1);
+      num2=parseInt(num2);
+      num3=parseInt(num3);
+      if (num1>num2 && num1>num3)
+      {
+        document.write(num1);
+      }
+      else
+      {
+        if (num2>num1 && num2>num3)
+        {
+          document.write(num2);
+        }
+        else
+        {
+          document.write(num3);
+        }
+      }
+    </script> -->
+    
+<!-- Problema #2
+    <script>
+        var num1,num2,num3;
+        num1=prompt('Ingrese un numero:','');
+        num1=parseInt(num1);
+        if (num1>0)
+        {
+          document.write("positivo");
+        }
+        else
+        {
+            if (num1==0)
+          {
+            document.write("es cero");
+          }
+          else
+          {
+            document.write("es negativo");
+          }
+        }
+      </script> -->
+
+<!-- Problama #3
+<script>
+    var num1;
+    num1=prompt('Ingrese un numero:','');
+    num1=parseInt(num1);
+    if (num1<10)
+    {
+      document.write("tiene 1 cifra");
+    }
+    else
+    {
+        if (num1<99)
+      {
+        document.write("tiene 2 cifras");
+      }
+      else
+      {
+        document.write("tiene 3 cifras");
+      }
+    }
+  </script>
+
+    </body>
+    </html> -->
+    
+<script>
+var nom;
+var Porcentaje;
+nom=prompt('Ingrese su nombre:','');
+document.write(nom);
+document.write('<br>');
+Porcentaje=prompt('Cuantas preguntas de las 10 realizada, contesto bien:','');
+Porcentaje=parseInt(Porcentaje);
+    if (Porcentaje>=9)
+    {
+        document.write("Nivel superior");
+    }
+    else
+    {
+        if (Porcentaje<9 && Porcentaje>=7)
+        {
+        document.write("Nivel medio");
+        }
+        else
+        {
+            if (Porcentaje>=5 && Porcentaje<=7)
+            {
+            document.write("Nivel regular");
+            }
+            else{
+                document.write("Fuera de nivel");
+            }
+        }
+    }
+
+</script>
+
+
+
